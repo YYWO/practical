@@ -66,7 +66,7 @@ filebrowser() {
 	[ -z $catalogue ] && catalogue=/root
     read -p "请输入映射端口（默认80）：" filebrowserport
 	[ -z $filebrowserport ] && filebrowserport=80
-    sudo docker run -d     -v $catalogue:/srv     -e PUID=$(id -u)     -e PGID=$(id -g)     -p $filebrowserport:80     --name=filebrowser     --privileged=true     --restart always filebrowser/filebrowser
+    docker run -d     -v $catalogue:/srv     -e PUID=$(id -u)     -e PGID=$(id -g)     -p $filebrowserport:80     --name=filebrowser     --privileged=true     --restart always filebrowser/filebrowser
     shon_online
     }
     
