@@ -34,7 +34,7 @@ fi
 
 cloudflare() {
     echo "一键cloudflare内网穿透"
-    bash <(curl -sSL https://gh.woolzhp.eu.org/YYWO/practical/raw/main/shell/Tunnel.sh)
+    bash <(curl -sSL https://gh.woolzhp.eu.org/https://github.com/YYWO/practical/raw/main/shell/Tunnel.sh)
     shon_online
     
     }
@@ -46,12 +46,12 @@ echo "3.安装/更新 指定版本nodejs"
 echo "4.返回"
 read -p "请输入序号: " yn
  if [[ $yn == "1" ]];then
-  bash <(curl -sSL 'https://gh.woolzhp.eu.org/YYWO/practical/raw/main/shell/nodejs.sh') 
+  bash <(curl -sSL 'https://gh.woolzhp.eu.org/https://github.com/YYWO/practical/raw/main/shell/nodejs.sh') 
  elif [[ $yn == "2" ]];then
-  bash <(curl -sSL 'https://gh.woolzhp.eu.org/YYWO/practical/raw/main/shell/nodejs.sh') -l
+  bash <(curl -sSL 'https://gh.woolzhp.eu.org/https://github.com/YYWO/practical/raw/main/shell/nodejs.sh') -l
  elif [[ $yn == "3" ]];then
   read -p "请选择所要安装的版本：" V
-  bash <(curl -sSL 'https://gh.woolzhp.eu.org/YYWO/practical/raw/main/shell/nodejs.sh') -v $V
+  bash <(curl -sSL 'https://gh.woolzhp.eu.org/https://github.com/YYWO/practical/raw/main/shell/nodejs.sh') -v $V
   node -v
   elif [[ $yn == "4" ]];then
   shon_online
@@ -83,11 +83,11 @@ echo "5.frpc配置文件修改"
 echo "6.返回"
 read -p "请输入序号: " yn
  if [[ $yn == "1" ]];then
-  bash <(curl -sSL 'https://gh.woolzhp.eu.org/MvsCode/frps-onekey/raw/master/install-frps.sh') install
+  bash <(curl -sSL 'https://gh.woolzhp.eu.org/https://github.com/MvsCode/frps-onekey/raw/master/install-frps.sh') install
  elif [[ $yn == "2" ]];then
-  bash <(curl -sSL 'https://gh.woolzhp.eu.org/MvsCode/frps-onekey/raw/master/install-frps.sh') update
+  bash <(curl -sSL 'https://gh.woolzhp.eu.org/https://github.com/MvsCode/frps-onekey/raw/master/install-frps.sh') update
  elif [[ $yn == "3" ]];then
-  bash <(curl -sSL 'https://gh.woolzhp.eu.org/MvsCode/frps-onekey/raw/master/install-frps.sh') uninstall
+  bash <(curl -sSL 'https://gh.woolzhp.eu.org/https://github.com/MvsCode/frps-onekey/raw/master/install-frps.sh') uninstall
  elif [[ $yn == "4" ]];then
   containerName="frpc"
 if [[ -n $(docker ps -q -f "name=^${containerName}$") ]];then
@@ -218,7 +218,7 @@ mzproxy() {
 	read -p "请输入容器名称（默认mzproxy）：" dockername
 	[ -z $dockername ] && dockername=mzproxy
 	docker run -itd -v $catalogue:/run/data -p $port:8080 --name $dockername mzzsfy/auto-proxy-pool
-	cd $catalogue && wget https://gh.woolzhp.eu.org/YYWO/practical/raw/main/config/proxy.yml
+	cd $catalogue && wget https://gh.woolzhp.eu.org/https://github.com/YYWO/practical/raw/main/config/proxy.yml
     read -p "提取代理API地址：" apiUrl
     apiUrl=$apiUrl && sed -i "s/apiUrl: xxx/apiUrl: $apiUrl!g" $catalogue/proxy.yml
     read -p "自动失效时间（默认25秒）：" lifecycle
