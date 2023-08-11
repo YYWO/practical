@@ -76,7 +76,7 @@ $a install wget -y > /dev/null 2>&1
 #开始拉取argo tunnel
 file1="/usr/bin/cloudflared"
 if [ ! -f "$file1" ];then
- wget  "https://ghproxy.com/https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-${cpu}" -O cloudflared
+ wget  "https://gh.woolzhp.eu.org/https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-${cpu}" -O cloudflared
  chmod +x cloudflared && cp cloudflared /usr/bin
 fi
 
