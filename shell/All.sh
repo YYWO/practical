@@ -257,7 +257,7 @@ shon_online() {
     echo "  4) 安装/更新nodejs"
     echo "  5) docker安装filebrowser"
     echo "  6) Frp一键脚本"  
-    echo "  7) 科技lion一键脚本工具（常用工具安装&BBR管理&Docker管理&甲骨文云脚本合集&青龙面板安装"  
+    echo "  7) 科技lion一键脚本工具（常用工具安装&BBR管理&Docker管理&甲骨文云脚本合集&青龙面板安装）"  
 
     echo ""
     echo -n "请输入编号: "
