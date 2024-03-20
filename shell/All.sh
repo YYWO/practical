@@ -160,7 +160,7 @@ read -p "请输入序号: " yn
  echo custom_domains = $custom_domains >> /root/frpc/frpc.ini
  echo "配置完成"
  docker restart frpc
- check_and_create_user
+ #check_and_create_user
 else
    green "输入有误，如有需要请重新运行"
    shon_online
@@ -248,7 +248,7 @@ shon_online() {
     echo ""
     echo "今日运行次数：$TODAY   总共运行次数：$TOTAL"
     echo ""
-    check_and_create_user
+    #check_and_create_user
     echo "请选择您需要进行的操作:"
     echo "  0) 退出脚本"
     echo "  1) 一键DD系统"
